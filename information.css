@@ -1,0 +1,383 @@
+.profile-cardinfo{
+    position: relative;
+    height: 100vh;
+   
+    margin-top: cm;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .containerinfo {
+    position: relative;
+    z-index: 100;
+    width: 900px;
+    height: 520px;
+    margin-left: 1.5cm;
+    border-radius: 10px;
+    padding: 30px;
+    background: rgba(255, 255, 255, .15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, .37);
+    border: 1px solid rgba(255, 255, 255, .18);
+    
+  }
+  .containerinfo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.8;
+    border-radius: 10px;
+    z-index: -1;
+  }
+  .containerinfo .img-informa {
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    width: 130px;
+    height: 100px;
+    z-index: 100;
+   
+  }
+  .containerinfo .img-informa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 65%;
+  }
+  
+  .containerinfo .inform {
+    position: relative;
+    z-index: 100;
+  }
+  .containerinfo .information-form h1 {
+    font-size: 22px;
+    width: 50%;
+    color:#9f99f5b2 ;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--main-color);
+  }
+  
+  .containerinfo .information-form p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #7c7c7cb2;
+  }
+  
+  .containerinfo .information-form p span {
+    color: var(--second-color);
+    flex: 1;
+  }
+  .containerinfo .information-form  .titreinfoform {
+    color: #9aa9ebd7;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+  .containerinfo .information-form p:last-of-type {
+    letter-spacing: 1.5px;
+  }
+  .containerinfo .information-form  p i {
+    color: var(--main-color);
+    padding-right: 15px;
+  }
+  .containerinfo .links-buttonform {
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    
+  }
+  
+  
+  .containerinfo .links-buttonform a i {
+    line-height: 10px;
+    font-size: 20px;
+  }
+  .containerinfo .links-buttonform a{
+    text-decoration: none;
+  }
+  @media (max-width: 767px) {
+    .profile-cardinfo,
+    .profile-cardinfo::after {
+      height: 120vh;
+    }
+    .containerinfo {
+      margin: 0 15px;
+    }
+    .containerinfo .img-informa {
+      position: relative;
+      margin: 0 auto;
+      width: 250px;
+      height: 250px;
+      right: auto;
+      margin-bottom: 15px;
+    }
+    .containerinfo .information-form h1 {
+      font-size: 30px;
+    }
+    .containerinfo .img-informa img {
+      border-radius: 50%;
+    }
+  }
+  
+  
+  .btn-forminfo {
+    display: block;
+    
+    padding: 12px 40px;
+    border: 0;
+    background: linear-gradient(to left,   rgba(190, 204, 241, 0.158),   rgba(105, 161, 235, 0.637)  );
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 .1rem .2rem #0002;
+    border-radius: 15px;
+    cursor: pointer;
+  margin-top: 1cm;
+  
+  }
+  .btn-forminfo a{
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+  }
+  .btn-forminfo:hover{
+    background-color: rgba(199, 68, 199, 0.281);
+  }
+  
+  
+  
+  /*form update
+*/
+
+
+ .containerformupdate{
+    
+    max-width: 800px;
+    width: 900%;
+    height: 100%;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 15px;
+    display: none;
+    background: rgba(255, 255, 255, .15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, .37);
+    border: 1px solid rgba(255, 255, 255, .18);
+    
+  }
+   .containerformupdate header{
+    position: relative;
+    font-size: 23px;
+    font-weight: 600;
+    color:rgba(71, 68, 231, 0.664);
+    text-align: center;
+  }
+   .containerformupdate header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .15);
+  }
+  .containerformupdate form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 600px;
+    
+    overflow: hidden;
+  }
+  .containerformupdate form .form2{
+    position: absolute;
+    
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+    transition: 0.3s ease;
+  }
+  .containerformupdate form .form2.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+  }
+   form.secActive .form2.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+   form.secActive .form2.first-update{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+  }
+   .containerformupdate form .titleform-update{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+  }
+  .containerformupdate form .fieldsformupdate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+   form .fieldsformupdate .input-fieldformupdate{
+    display: flex;
+    width: calc(100% / 2 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+  }
+  .containerformupdate .input-fieldformupdate label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+  }
+   .input-fieldformupdate  input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 35px;
+    margin: 8px 0;
+  }
+   .input-fieldformupdate  input :focus,
+   .input-fieldformupdate  select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+  }
+  .input-fieldformupdate  select,
+  .input-fieldformupdate  input[type="date"]{
+    color: #707070;
+  }
+  .input-fieldformupdate  input[type="date"]:valid{
+    color: #333;
+  }
+   .buttonsform1-update button{
+  
+    width: 30%;
+  position: relative;
+  padding: 10px 20px;
+  border: 0;
+  background: linear-gradient(to left,   rgba(135, 137, 238, 0.685),   #b0c7fab2  );
+  color: #fff;
+  
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 .1rem .2rem #0002;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2cm;
+  margin-top: 1cm;
+  margin-bottom: 0.2cm;
+  
+  }
+   .buttonsform1-update button:hover{
+  
+  width: 34%;
+  background: linear-gradient(to left,   rgba(199, 227, 238, 0.411),   rgba(133, 102, 247, 0.664)  );
+  
+  
+  }
+  
+  @media (max-width: 750px) {
+    .containerformupdate form{
+        overflow-y: scroll;
+    }
+    .containerformupdate form::-webkit-scrollbar{
+       display: :
+    }
+    form .fieldsformupdate .input-fieldformupdate{
+        width: calc(100% / 2 - 15px);
+    }
+  }
+  
+  @media (max-width: 550px) {
+    form .fieldsformupdate .input-fieldformupdate{
+        width: 100%;
+    }
+  }
+  
+  
+  
+  
+  .containerformupdate .select-menuinst2{
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+   margin-left: 5.5cm;
+   margin-bottom: 0.5cm;
+   margin-top: 0.5cm;
+  }
+  
+  .containerformupdate .selectinst2{
+    background-color: #b0c7fa7c;
+    padding: 11px;
+    color: #707070;
+    font-weight: 400;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+  }
+  
+  .options-list2{
+    position: absolute;
+    width: 100%;
+    background-color: #b0c7faaf;
+    color: #707070;
+    border-radius: 6px;
+    margin-top: 14px;
+    padding: 0 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    transition: .4s linear .2s;
+    height: 0;
+  }
+  
+  .options-list2 .option2{
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+    transition: .3s ease-in-out;
+  }
+  
+  .options-list2 .option2:hover,
+ .options-list.option.selected{
+    color: #00a8ff;
+  }
+  
+  .options-list2::-webkit-scrollbar{
+    width: 4px;
+    background-color: #eee;
+  }
+  
+  .options-list2::-webkit-scrollbar-thumb{
+    background-color: #00a8ff;
+  }
+  
+  .options-list2.active{
+    height: 180px;
+  }
